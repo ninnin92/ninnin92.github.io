@@ -1,24 +1,203 @@
-プライバシーポリシー
 
-1. 取得する情報
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="睡眠記録連携アプリのプライバシーポリシーです。">
+  <title>プライバシーポリシー | 睡眠記録連携アプリ</title>
+  <style>
+    :root {
+      --primary: #315c52;
+      --background: #f5f7f5;
+      --text: #26332f;
+      --muted: #5f6d67;
+      --surface: #ffffff;
+    }
 
-本アプリは、Google Health APIを通じてユーザー本人の睡眠情報を取得します。
+    * { box-sizing: border-box; }
 
-2. 利用目的
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI",
+        "Noto Sans JP", sans-serif;
+      line-height: 1.9;
+      color: var(--text);
+      background: var(--background);
+    }
 
-取得した情報は、ユーザー本人のNotionデータベースに
-睡眠時間を記録する目的にのみ利用します。
+    header {
+      background: var(--primary);
+      color: white;
+      padding: 32px 20px;
+    }
 
-3. 第三者提供
+    .container {
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 0 22px;
+    }
 
-取得した情報を第三者に提供、販売、公開することはありません。
+    h1 {
+      font-size: clamp(1.6rem, 5vw, 2.2rem);
+      line-height: 1.5;
+    }
 
-4. データの保存
+    main {
+      padding-top: 28px;
+      padding-bottom: 48px;
+    }
 
-Google Health APIから取得した情報は、本アプリの処理に必要な範囲で利用します。
-Notionへの記録については、ユーザー本人が管理するNotionデータベースに保存されます。
+    section {
+      background: var(--surface);
+      margin-bottom: 18px;
+      padding: 22px 24px;
+      border-radius: 12px;
+    }
 
-5. お問い合わせ
+    h2 {
+      font-size: 1.2rem;
+      color: var(--primary);
+      margin-top: 0;
+    }
 
-本アプリは個人利用を目的としているため、
-お問い合わせはアプリ所有者までお願いします。
+    a { color: var(--primary); }
+
+    .muted {
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 24px 16px;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>プライバシーポリシー</h1>
+      <p>睡眠記録連携アプリ</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section>
+      <h2>1. 基本方針</h2>
+      <p>
+        本アプリケーションは、個人の睡眠記録を管理するために
+        作成した個人利用向けツールです。
+        取得する情報は、本人の睡眠記録の作成・管理に必要な範囲で
+        取り扱います。
+      </p>
+    </section>
+
+    <section>
+      <h2>2. 取得する情報</h2>
+      <p>
+        本アプリケーションは、ユーザーの許可に基づき、
+        Google Health APIを通じて睡眠に関する情報を取得します。
+        具体的には、設定やAPIから提供されるデータに応じて、
+        次の情報を取り扱います。
+      </p>
+      <ul>
+        <li>睡眠の開始時刻</li>
+        <li>睡眠の終了時刻</li>
+        <li>睡眠時間</li>
+        <li>APIが提供する睡眠セッションに関する情報</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>3. 利用目的</h2>
+      <p>
+        取得した情報は、本人の日々の睡眠状況を記録し、
+        振り返りや自己管理に役立てる目的でのみ使用します。
+        この目的を超えて、広告、販売、第三者への提供などに
+        利用することはありません。
+      </p>
+    </section>
+
+    <section>
+      <h2>4. データの保存と外部サービス</h2>
+      <p>
+        取得した睡眠情報は、ユーザー本人が管理するNotionの日記
+        データベースに記録します。
+        処理にはGoogle Apps Script、Google Health APIおよびNotionの
+        サービスを利用します。
+      </p>
+      <p>
+        OAuth認証に必要な情報は、Google Apps Scriptの
+        プロパティストアを利用して管理します。
+        認証情報や取得データの取り扱いについては、
+        各サービスの仕様および設定に従います。
+      </p>
+      <p>
+        GoogleおよびNotionによるデータの処理・保存については、
+        各サービスのプライバシーポリシーも適用されます。
+      </p>
+    </section>
+
+    <section>
+      <h2>5. 第三者への提供</h2>
+      <p>
+        本アプリケーションの管理者が、取得した情報を独自に
+        第三者へ販売または提供することはありません。
+        ただし、データ取得・記録に必要なGoogleおよびNotionの
+        サービス利用はこの限りではありません。
+      </p>
+    </section>
+
+    <section>
+      <h2>6. データの管理と削除</h2>
+      <p>
+        ユーザーは、本人が管理するNotionデータベースから
+        記録されたデータを確認・削除できます。
+        また、Googleアカウントのセキュリティ設定から
+        本アプリケーションへのアクセス権を取り消すことができます。
+      </p>
+      <p>
+        Notionに記録済みのデータは、アクセス権を取り消しただけでは
+        自動的に削除されない場合があります。必要に応じて、
+        Notion側で別途削除してください。
+      </p>
+    </section>
+
+    <section>
+      <h2>7. セキュリティ</h2>
+      <p>
+        本アプリケーションは、Google Apps Scriptの認証機能と
+        プロパティストアなどを利用して認証情報を管理します。
+        ただし、インターネットを利用するサービスにおいて、
+        あらゆるリスクを完全に排除できることを保証するものではありません。
+      </p>
+    </section>
+
+    <section>
+      <h2>8. ポリシーの変更</h2>
+      <p>
+        アプリケーションの機能やデータの取り扱いに変更があった場合、
+        実態に合わせて本ポリシーを更新します。
+      </p>
+    </section>
+
+    <section>
+      <h2>9. お問い合わせ</h2>
+      <p>
+        本アプリケーションは管理者本人による個人利用を目的としており、
+        一般向けの問い合わせ窓口は設けていません。
+      </p>
+    </section>
+
+    <p class="muted">最終更新日：2026年10月18日</p>
+    <p><a href="./index.html">ホームページに戻る</a></p>
+  </main>
+
+  <footer>
+    <p>個人利用向け睡眠記録連携アプリ</p>
+  </footer>
+</body>
+</html>
